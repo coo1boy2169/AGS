@@ -1,0 +1,198 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: center;
+	
+}
+
+.title{
+	font-size: 70px;
+	background: #a33dc5;
+	color: white;
+	margin: 5rem;
+	border: solid 0.2rem #000000;
+	padding: 2rem;
+	border-radius: 1rem 0rem 1rem 0rem;
+}
+
+/* Calendar Container */
+.calendar-container {
+    width: 1200px;
+	height: 10rem;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.calendar-header button {
+    background: #a33dc5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-header button:hover {
+    background: #a33dc5;
+}
+
+.calendar-header h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Calendar Grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.day {
+    background: #a33dc5;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.day:hover {
+    background: #a33dc5;
+    transform: translateY(-5px);
+}
+
+.day h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.selected-appointment {
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#popup-day {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.slot {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slot:hover {
+    background: #a33dc5;
+    color: white;
+}
+
+.slot.selected {
+    background: #a33dc5;
+    color: white;
+    cursor: default;
+}
+
+#appointment-form {
+    margin-top: 10px;
+}
+
+#appointment-description {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#save-appointment {
+    background: #a33dc5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#save-appointment:hover {
+    background: #a33dc5;
+}
+
+#close-popup {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#close-popup:hover {
+    background: #d32f2f;
+}

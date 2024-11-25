@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Calendar</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"defer></script>
+</head>
+
+<body>
+<h1 class="title">Boeken voor printer</h1>
+
+  <div class="calendar-container">
+      <div class="calendar-header">
+          <button id="prev-week">← Previous Week</button>
+          <h2 id="current-week"></h2>
+          <button id="next-week">Next Week →</button>
+      </div>
+      <div id="calendar"></div>
+  </div>
+
+  <!-- Appointment Popup -->
+  <div id="popup" class="popup hidden">
+      <div class="popup-content">
+          <h3 id="popup-day"></h3>
+          <div id="time-slots"></div>
+          <div id="appointment-form" class="hidden">
+              <textarea id="appointment-description" placeholder="Describe your appointment..."></textarea>
+              <button id="save-appointment">Save Appointment</button>
+          </div>
+          <button id="close-popup">Close</button>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
