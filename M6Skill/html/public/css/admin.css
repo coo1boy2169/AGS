@@ -1,0 +1,182 @@
+/* Algemene stijl voor alle pagina's */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1, h2 {
+    color: #007BFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Algemene layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tabel styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Knop styling */
+button, input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Invoervelden */
+input[type="number"], input[type="text"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Formulier Styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="submit"], form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Specifieke stijl voor de buttons */
+button[name="action"][value="approve"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[name="action"][value="reject"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+button {
+    padding: 6px 12px;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Verwijderknop stijl */
+button[type="submit"][style*="background-color: #f44336"] {
+    background-color: #f44336;
+}
+
+button[type="submit"][style*="background-color: #f44336"]:hover {
+    background-color: #e53935;
+}
+
+/* Afspraak formulier */
+button[type="submit"][style*="background-color: #007BFF"] {
+    background-color: #007BFF;
+}
+
+button[type="submit"][style*="background-color: #007BFF"]:hover {
+    background-color: #0056b3;
+}
+
+/* Modal styling voor de admin of gebruiker */
+#appointmentModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#appointmentModal div {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
